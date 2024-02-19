@@ -1,0 +1,10 @@
+from itertools import groupby
+
+def count_trees(forest):
+    tree_counts = {key: len(list(group)) for key, group in groupby(sorted(forest))}
+    return tree_counts
+
+# Example usage:
+forest = ["oak", "pine", "oak", "maple", "birch", "oak"]
+tree_counts = count_trees(forest)
+print("Tree counts in the forest:", tree_counts)
